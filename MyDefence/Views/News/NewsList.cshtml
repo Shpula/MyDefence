@@ -1,0 +1,33 @@
+﻿@using MyDefence.Data.Models
+@model IEnumerable<News>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width-device-width" />
+    <title>List</title> 
+</head>
+<body>
+    <h2>Все новости</h2>
+    @{ 
+        foreach(var news in Model)
+        {
+            <div>
+                <h2>
+                    Заголовок: @news.ShortDesk
+                    </h2>
+                <img>
+                    Картинка: @news.img
+
+                <p>
+                        Содержание: @news.LongDesk
+                    </p>
+            </div>
+        }
+    }
+</body>
+</html>
